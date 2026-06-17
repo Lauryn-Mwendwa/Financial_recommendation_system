@@ -18,7 +18,6 @@
 - [Testing & Results](#testing--results)
 - [Limitations](#limitations)
 - [Future Improvements](#future-improvements)
-- [References](#references)
 
 ---
 
