@@ -1,10 +1,4 @@
 # 🎯 A Personalized Recommendation System for Behavioral-Based Financial Planning
-
-> **Bachelor of Science in Data Science — Final Year Project**
-> The Co-operative University of Kenya (CUK) | 2026
-> **Lauryn Mwendwa Kagwiria** | BDATC01/0806/2022
-> **Supervisor:** Peter Muigai
-
 ---
 
 ## 📋 Table of Contents
