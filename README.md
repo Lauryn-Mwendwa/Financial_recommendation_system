@@ -300,20 +300,3 @@ Users were categorized into three feasibility groups:
 8. **Regulatory Compliance** — Comply with Kenya's Data Protection Act (2019) for any commercial deployment
 
 ---
-
-## 📚 References
-
-- Ahmed, S., Patel, R., & Mehta, K. (2021). Personalized financial recommendation systems: A review. *Journal of Financial Technology Research, 5*(2), 45–60.
-- García, M., Lee, J., & Patel, K. (2020). Mobile applications for personal financial management. *Journal of Digital Finance, 4*(3), 22–38.
-- Johnson, T. (2021). Evaluating financial apps for personal budgeting. *International Journal of Digital Finance, 3*(1), 15–29.
-- Kumar, A., & Lee, J. (2019). Limitations of generic personal finance tools. *Journal of Consumer Finance, 7*(3), 50–62.
-- Peiris, T. U. I. (2021). Effect of financial literacy on individual savings behavior. *European Journal of Business and Management Research, 6*(5), 1–6.
-- Sarah, K. C., & Mule, R. K. (2023). Do budgeting practices affect saving behavior among small-scale entrepreneurs in Kenya? *European Scientific Journal, 19*(1), 87–102.
-- Smith, L., & Brown, R. (2020). Zero-based budgeting applications. *Journal of Personal Finance, 12*(4), 88–102.
-- Taylor, P. (2021). Educating users through budgeting apps. *Financial Literacy Review, 8*(2), 33–47.
-- Thaler, R. H., & Sunstein, C. R. (2008). *Nudge.* Yale University Press.
-- Wamukota, M., & Luutsa, F. E. (2025). Impact of financial literacy on expenditure, savings, and investments. *Strategic Journal of Business & Change Management, 12*(1), 330–342.
-
----
-
-> *This project was submitted in partial fulfillment of the requirements for the award of the Bachelor of Science in Data Science at The Co-operative University of Kenya, January 2026.*
