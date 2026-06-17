@@ -24,7 +24,7 @@
 
 ## 📌 Overview
 
-Most existing financial planning tools — like Mint, YNAB, and PocketGuard — provide **generic recommendations** that treat all users the same, regardless of their individual spending habits, saving tendencies, or financial goals. This means users receive advice that does not reflect their actual financial behavior, leading to unrealistic budgets, poor adherence, and continued financial stress.
+Most existing financial planning tools provide **generic recommendations** that treat all users the same, regardless of their individual spending habits, saving tendencies, or financial goals. This means users receive advice that does not reflect their actual financial behavior, leading to unrealistic budgets, poor adherence, and continued financial stress.
 
 This project addresses that gap by building a **personalized recommendation system** that:
 
