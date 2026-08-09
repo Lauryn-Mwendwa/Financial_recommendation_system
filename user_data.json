@@ -1,0 +1,18 @@
+{
+  "lauryn@example.com": {
+    "password": "password123",
+    "name": "Lauryn"
+  },
+  "john@example.com": {
+    "password": "securepass",
+    "name": "John"
+  },
+  "demo@financial.com": {
+    "password": "demo123",
+    "name": "Demo User"
+  },
+  "laurynmwendwa26@gmail.com": {
+    "password": "Barbeque26.",
+    "name": "laurynmwendwa26@gmail.com"
+  }
+}
