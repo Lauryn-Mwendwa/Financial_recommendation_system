@@ -780,13 +780,15 @@ def render_sidebar():
         st.sidebar.image(st.session_state.profile_pic, width=140)
     st.sidebar.markdown("---")
     nav_items = ["Dashboard", "Goals", "Account", "Settings"]
-    current = "Dashboard"
     if st.session_state.page == "goal":
         current = "Goals"
     elif st.session_state.page == "account":
         current = "Account"
     elif st.session_state.page == "settings":
         current = "Settings"
+    else:
+        current = "Dashboard"
+
     selection = st.sidebar.radio("Navigation", nav_items, index=nav_items.index(current))
     page_map = {
         "Dashboard": "home",
@@ -794,7 +796,10 @@ def render_sidebar():
         "Account": "account",
         "Settings": "settings"
     }
-    st.session_state.page = page_map[selection]
+
+    if st.session_state.page not in ["income", "results"]:
+        st.session_state.page = page_map[selection]
+
     st.sidebar.markdown("---")
     st.sidebar.markdown("**Quick Actions**")
     if st.sidebar.button("🚀 Start Analysis", key="sidebar_start"):
@@ -823,21 +828,20 @@ def show_logout():
 if st.session_state.logged_in:
     st.markdown(f"""
     <div class="navbar">
-        <div class="nav-logo">Fin<span>Sight</span></div>
+        <div class="nav-logo">Imali</div>
         <div style="display:flex; align-items:center; gap:1rem;">
             <div style="color:#6B7280; font-size:0.9rem; font-weight:500;">Hey {st.session_state.user_name} 👋</div>
-            <div class="nav-pill">💎 Smart Finance</div>
+            <div class="nav-pill">💎 Your Financial Companion</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
 else:
     st.markdown("""
     <div class="navbar">
-        <div class="nav-logo">Fin<span>Sight</span></div>
-        <div class="nav-pill">💎 Smart Finance</div>
+        <div class="nav-logo">Imali</div>
+        <div class="nav-pill">💎 Your Financial Companion</div>
     </div>
     """, unsafe_allow_html=True)
-
 
 # ─────────────────────────────────────────
 # PAGE: HOME
@@ -1006,6 +1010,27 @@ def show_goal():
 # ─────────────────────────────────────────
 def show_results():
     d = st.session_state.form_data
+    required_keys = [
+        "income", "savings", "total_expenses", "entertainment",
+        "subscriptions", "target", "timeline", "required_monthly"
+    ]
+    missing = [key for key in required_keys if key not in d]
+    if missing:
+        st.markdown('<div class="page-wrap">', unsafe_allow_html=True)
+        st.error("Please complete the Income and Goal steps before viewing results.")
+        st.write("Missing data: " + ", ".join(missing))
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("← Back to Goal", key="results_back"):
+                st.session_state.page = "goal"
+                st.rerun()
+        with col2:
+            if st.button("🏠 Back to Home", key="results_home"):
+                st.session_state.page = "home"
+                st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)
+        return
+
     income        = d["income"]
     savings       = d["savings"]
     total_exp     = d["total_expenses"]
